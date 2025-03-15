@@ -1,12 +1,12 @@
-def total_salary(path: str) -> tuple[int, float]:
+def total_salary(path: str) -> tuple[int, int]:
     try:
         with open(path, "r", encoding="utf-8") as file:
             salaries = [int(line.split(",")[1])for line in file if line.strip()]
 
-            total = sum(salaries)
-            average = total / len(salaries) if salaries else 0
+        total = sum(salaries)
+        average = total // len(salaries) if salaries else 0
 
-            return total, average
+        return total, average
 
     except FileNotFoundError:
          print("File not found. Check the path.")
@@ -16,8 +16,8 @@ def total_salary(path: str) -> tuple[int, float]:
         print("Invalid data in the file. Check the format.")
         return 0, 0
     
-    file_path = "salaries.txt"
+file_path = "salaries.txt"
 
-    total, average = total_salary(file_path)
+total, average = total_salary(file_path)
 
-    print(f"Total salary amount: {total}, Average salary: {average:.2f}")
+print(f"Total salary amount: {total}, Average salary: {average}")
