@@ -10,7 +10,7 @@ def get_cats_info(path: str) -> list[dict]:
                         cat_dict = {
                             "id": parts[0],
                             "name": parts[1],
-                            "age": int(parts[2])
+                            "age": parts[2]
                         }
                         cats_list.append(cat_dict)
 

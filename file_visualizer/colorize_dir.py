@@ -29,7 +29,7 @@ def print_dir_structure(directory: Path, prefix=""):
 if __name__ == "__main__":
   
     if len(sys.argv) < 2:
-        print(Fore.RED + "Ошибка: Укажите путь к директории!")
+        print(Fore.RED + "Error: Specify the path to the directory!")
         sys.exit(1)
 
  
@@ -37,7 +37,7 @@ if __name__ == "__main__":
 
     
     if not dir_path.exists():
-        print(Fore.RED + f"Ошибка: Путь '{dir_path}' не существует!")
+        print(Fore.RED + f"Error: Path'{dir_path}' does not exist!")
         sys.exit(1)
 
   

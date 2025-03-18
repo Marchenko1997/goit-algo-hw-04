@@ -39,7 +39,7 @@ def handle_command(command, arg, contacts):
         return change_contact(arg, contacts)
     elif command == "phone":
         return show_phone(arg, contacts)
-    elif command == "show":
+    elif command == "all":
         return show_all(contacts)
     else:
         return "Invalid command. Please try again."
